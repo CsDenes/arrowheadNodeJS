@@ -23,9 +23,10 @@ app.get('/', function(req, res) {
 
     connection.query('SELECT * from ArrowheadSystem', function(err, rows, fields) {
         connection.end();
-        if (!err)
+        if (!err) {
             console.log('The solution is: ', rows);
-            jsonobj=rows;
+            jsonobj = JSON.parse(rows);
+        }
         else
             console.log('Error while performing Query.');
     });
