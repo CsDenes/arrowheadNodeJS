@@ -6,7 +6,7 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 1337;
-var jsonobj = [{foo:'bar'}];
+jsonobj = [{foo:'bar'}];
 
 
 
