@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
         connection.end();
         if (!err) {
             console.log('The solution is: ', rows);
-            res.json(rows);
+            res.end(rows);
           //  jsonobj = JSON.parse(rows);
         }
         else
