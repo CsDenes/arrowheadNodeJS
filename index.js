@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 
-var port = process.env.PORT || 1337;
+var port = 443;
 //app.set('view engine', 'ejs');
 
 //Serve static before session
