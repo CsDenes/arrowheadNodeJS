@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
 
 
 app.get('/', function(req,res){
-    res.json({foo:'bar'})
+    res.json({foo:'bartest'})
 })
 
 app.use(function (err, req, res, next) {
