@@ -6,7 +6,7 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 1337;
-var jsonobj;
+var jsonobj = [{foo:'bar'}];
 
 
 
@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
         connection.end();
         if (!err) {
             console.log('The solution is: ', rows);
-            jsonobj = JSON.parse(rows);
+           // jsonobj = JSON.parse(rows);
         }
         else
             console.log('Error while performing Query.');
