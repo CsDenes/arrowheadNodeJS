@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+
+var port = process.env.PORT || 1337;
 //app.set('view engine', 'ejs');
 
 //Serve static before session
@@ -35,8 +37,8 @@ app.use(function (err, req, res, next) {
     console.error(err.stack);
 });
 
-var server = app.listen(3000, function () {
-    console.log('Hello :3000');
+var server = app.listen(port, function () {
+    console.log('Hello : 1337');
 });/**
  * Created by Denes on 07/04/16.
  */
