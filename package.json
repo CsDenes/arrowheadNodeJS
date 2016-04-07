@@ -1,26 +1,28 @@
 {
   "name": "arowheadnode",
-  "version": "1.0.0",
-  "description": "managementtool",
-  "main":“sever.js",
+  "version": "0.0.1",
+  "description": "\"ManagementTool\"",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4"
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CsDenes/arrowheadNodeJS.git"
   },
   "keywords": [
-    "npm"
+    "node"
   ],
   "author": "DenesCsizmadia",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CsDenes/arrowheadNodeJS/issues"
   },
-  "homepage": "https://github.com/CsDenes/arrowheadNodeJS#readme",
-  "dependencies": {
-    "express": "^4.13.4",
-    "mysql": "^2.10.2"
-  }
+  "homepage": "https://github.com/CsDenes/arrowheadNodeJS#readme"
 }
