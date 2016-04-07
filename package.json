@@ -2,7 +2,7 @@
   "name": "arowheadnode",
   "version": "1.0.0",
   "description": "managementtool",
-  "main": "index.js",
+  "main": “sever.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
