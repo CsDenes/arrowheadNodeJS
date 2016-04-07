@@ -27,7 +27,9 @@ app.use(function (req, res, next) {
 
 
 app.get('/', function(req,res){
-    res.json({foo:'bartest'})
+   // res.json({foo:'bartest'})
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World\n');
 })
 
 app.use(function (err, req, res, next) {
@@ -38,6 +40,7 @@ app.use(function (err, req, res, next) {
 });
 
 var server = app.listen(port, function () {
+
     console.log('Hello : 1337');
 });/**
  * Created by Denes on 07/04/16.
