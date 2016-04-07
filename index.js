@@ -13,11 +13,51 @@ var jsonobj = [
     { author : 'Neale Donald Walsch', text : "You are afraid to die, and you're afraid to live. What a way to exist."}
 ];
 
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+    host     : '152.66.245.167',
+    user     : 'Szakdoga2',
+    password : 'sch1716',
+    database : 'core'
+});
+
 app.get('/', function(req, res) {
-    res.json(jsonobj);
+
+
+    connection.query('SELECT * from ArrowheadSystem', function(err, rows, fields) {
+        connection.end();
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.');
+    });
+
+    res.json(rows);
+
 });
 
 //app.use(express.static('static'));
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+    host     : '152.66.245.167',
+    user     : 'arrowhead',
+    password : 'root',
+    database : 'core'
+});
+
+
+
+connection.connect(function(err){
+    if(!err) {
+        console.log("Database is connected ... nn");
+    } else {
+        console.log("Error connecting database ... nn");
+    }
+
+});
+
 
 var server = app.listen(port, function () {
     console.log('Hello')
