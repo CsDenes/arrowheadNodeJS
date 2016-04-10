@@ -6,7 +6,23 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 1337;
-var jsonobj = [{foo:'bar'}];
+var jsonobj = [
+        {
+            "id": 1,
+            "provider": "Provider",
+            "serviceURI": "Service URI",
+            "serviceMetadata": "Metadata",
+            "tSIG_key": "123456"
+        },
+        {
+            "id": 2,
+            "provider": "Provider",
+            "serviceURI": "Service URI",
+            "serviceMetadata": "Metadata",
+            "tSIG_key": "123456"
+        },
+    ]
+    ;
 
 
 
@@ -25,14 +41,14 @@ app.get('/', function(req, res) {
         connection.end();
         if (!err) {
             console.log('The solution is: ', rows);
-            res.end(rows);
-          //  jsonobj = JSON.parse(rows);
+            jsonobj = rows;
+            res.json(jsonobj);
         }
         else
             console.log('Error while performing Query.');
     });
 
-    res.json(jsonobj);
+//    res.json(jsonobj);
 
 });
 
